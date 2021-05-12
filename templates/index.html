@@ -1,0 +1,28 @@
+{% extends 'layout.html'%}
+
+{% block heading %}
+
+    <nav class="navbar navbar-dark bg-dark">
+
+        <span class="navbar-text">
+            <h1 style="color:white">Emotion Based Music Player</h1>
+        </span>
+    </nav>
+
+{% endblock %}
+
+{% block body %}
+
+        <div class="container " align="center">
+            <img class="center" id="imageid" src= "{{ url_for('video_feed') }}" alt="Detecting emotion.....">
+        <br><br>
+        <div class="container text-md-center">
+            <a href="{{ url_for('show_list') }}"> <input type="button" value="Get Playlist" title="click here after detecting emotion"  class="btn btn-primary"></a>
+    
+            <a href="{{ url_for('index') }}"> <input type="button" value="Get another Emotion" title="click here to detect another emotion" class="btn btn-secondary" /></a>
+        </div>
+    
+  
+
+
+{% endblock %}

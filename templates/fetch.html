@@ -1,0 +1,44 @@
+{% extends 'layout.html'%}
+
+{% block heading %}
+<nav class="navbar navbar-dark bg-primary">
+    <span class="navbar-text">
+        <h1 style="color:white">Welcome,you seems {{emotion}}, list of songs recommended for you are .....</h1>
+    </span>
+</nav>
+
+
+
+{% endblock %}
+
+{% block body %}
+    <div class="table-responsive text-center">
+
+        <table class="table table-hover table-dark align-middle ">
+            <!-- <caption>List of songs </caption> -->
+            <tr>
+                <th>Title</th>
+                <th>Singer</th>
+                <th>Song</th>
+            </tr>
+            
+                {% for song_title,song_url,singer in songs_list %}
+                <tr>
+                    
+                        <td>{{song_title}}</td>
+                        <td>{{ singer }}</td>
+                        <td><a href="{{song_url}}"><img src="/static/play.jpg" class="img-responsive" width="10%", height="auto"></a></td>
+                    
+                </tr>
+                {% endfor %}
+            
+            
+        </table>
+
+    </div>
+    <div align="center">
+        <a href="{{ url_for('index') }}"> <input type="button" value="Get another Emotion"  title="click here to detect another emotion" class="btn btn-primary" /></a>
+    </div>
+
+
+{% endblock %}
