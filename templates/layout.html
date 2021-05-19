@@ -7,10 +7,31 @@
             integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
 
     </head>
-    <body>
+    <body class=".bg-secondary.bg-gradient">
         <h1>{% block heading  %}{% endblock %}</h1>
-        {% block body %}
-        {% endblock %}
+<!-- 
+        <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Home</a>
+                <a class="navbar-brand" aria-current="page" href="#">About</a>
+                <a class="navbar-brand" href="#">Features</a>
+                <a class="navbar-brand" href="#">Contact</a>
+            </div>
+        </nav> -->
+        <nav class="navbar navbar-light bg-dark ">
+            <form class="container-fluid justify-content-start ">
+                <button class="btn btn-outline-success me-2" type="button">Home</button>
+                <button class="btn btn-outline-success me-2" type="button">Features</button>
+                <button class="btn btn-outline-success me-2" type="button">About</button>
+                <button class="btn btn-outline-success me-2" type="button">Contact</button>
+            </form>
+        </nav>
+        <br>
+       
+            {% block body %}
+            {% endblock %}
+    
+       
     </body>
 
 </html>

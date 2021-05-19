@@ -5,7 +5,7 @@
     <nav class="navbar navbar-dark bg-dark">
 
         <span class="navbar-text">
-            <h1 style="color:white">Emotion Based Music Player</h1>
+            <h1 style="color:white">Welcome to Emotion Based Music Player...</h1>
         </span>
     </nav>
 
@@ -13,7 +13,8 @@
 
 {% block body %}
 
-        <div class="container " align="center">
+    <div class=" .bg-secondary.bg-gradient ">
+        <div class="container" align="center">
             <img class="center" id="imageid" src= "{{ url_for('video_feed') }}" alt="Detecting emotion.....">
         <br><br>
         <div class="container text-md-center">
@@ -21,6 +22,7 @@
     
             <a href="{{ url_for('index') }}"> <input type="button" value="Get another Emotion" title="click here to detect another emotion" class="btn btn-secondary" /></a>
         </div>
+    <div>
     
   
 
